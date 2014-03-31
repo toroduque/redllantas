@@ -1,3 +1,14 @@
 // Place all the styles related to the customers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.redllantas-logo {
+	margin-top: 15px;
+}
+
+#error_explanation {
+	border-style: solid;
+	border-width: 1px;
+	padding: 15px;
+	margin: 15px;
+}

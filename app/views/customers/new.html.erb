@@ -1,5 +1,10 @@
-<h1>Nuevo Cliente</h1>
-
+<div class="row">
+	<div class="col-sm-8">
+		<h1>Formulario Mundial</h1>
+	</div>
+	<div class="col-sm-4">
+		<%= link_to image_tag("redllantas.png", alt: "Promoción Mundial", class: "redllantas-logo"), 'http://redllantas/'  %>
+	</div>
+</div>
+<br>
 <%= render 'form' %>
-
-<%= link_to 'Back', customers_path %>
