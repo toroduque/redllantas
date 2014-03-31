@@ -1,0 +1,44 @@
+ <%= flash[:error] %>
+<%= form_for(@customer) do |f| %>
+
+  <% if @customer.errors.any? %>
+    <div id="error_explanation">
+
+      <h2><%= pluralize(@customer.errors.count, "error") %> errores en el formulario:</h2>
+
+      <ul>
+      <% @customer.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name, "Nombre" %><br>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name, "Apellido" %><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :cc %><br>
+    <%= f.text_field :cc %>
+  </div>
+  <div class="field">
+    <%= f.label :phone %><br>
+    <%= f.text_field :phone %>
+  </div>
+  <div class="field">
+    <%= f.label :email %><br>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= label_tag :code %><br>
+    <%= text_field_tag :code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
